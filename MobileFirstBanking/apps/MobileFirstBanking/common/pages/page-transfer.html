@@ -1,0 +1,57 @@
+<!--
+    © Copyright 2015 IBM Corp.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<div data-role="page" id="PageTransfer" class="app-page form-page page-secondary">
+    <div class="form-panel">
+        <h3><label for="SrcAccount" class="blue">From account:</label></h3>
+        <div class="field-wrapper full-field">
+            <div class="field">
+                <div class="input">
+                    <select name="SrcAccount" id="SrcAccount" disabled="disabled" data-role="none">
+                        <option value="93495345">Savings #93495345</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <h3><label for="DstAccount" class="blue">To account:</label></h3>
+        <div class="field-wrapper full-field">
+            <div class="field">
+                <div class="input">
+                    <select name="DstAccount" id="DstAccount" data-role="none">
+                        <option value="3429384">Savings #3429384</option>
+                        <option value="12429387">Savings #12429387</option>
+                        <option value="2394823">Credit #2394823</option>
+                        <option value="5345323">Credit #5345323</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <h3><label for="Amount" class="blue">Amount:</label></h3>
+        <div class="field-wrapper full-field no-dropdown">
+            <div class="field">
+                <div class="input">
+                    <input type="number" class="number-input" name="Amount" id="Amount" value="" data-role="none" />
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a href="#" class="button btn-large btn-default vertical-margin" id="transfer-button">Make a transfer</a>
+            <a href="#" class="button btn-large btn-gray" id="cancel-button">Cancel</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,401 @@
+* {
+    margin: 0px;
+	padding: 0px;
+
+	/* Disable selection/copy in UIWebView */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+
+	outline:none!important;
+}
+html, body {
+    font-family: 'Helvetica', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Arial', 'Lucida Grande', sans-serif;
+	background-color:#FFFFFF!important;
+	margin:0;
+	padding:0;
+	min-height:100%!important;
+	height:100%;
+    overflow:hidden;
+}
+.ui-page { -webkit-backface-visibility: hidden!important; }
+.app-page {
+	position:absolute!important;
+	max-height:100%;
+    min-height: 100%;
+    height:100%;
+    background:#FFFFFF!important;
+    box-sizing: border-box;
+}
+.app-page {
+    padding-bottom:68px;
+}
+.page-secondary {
+    padding-top:60px;
+}
+.form-page {
+    padding-left:8%;
+    padding-right:8%;
+	overflow:visible;
+}
+.red {
+	color:#f04e37!important;
+}
+.green {
+	color:#17AF4B!important;
+}
+.blue {
+	color:#00B3DA!important;
+}
+.button {
+    border:0!important;
+	border-radius:0!important;
+	padding:4% 0;
+	font-weight:bold;
+	text-shadow:none;
+	font-size:1.2em;
+	text-align:center;
+	text-decoration:none;
+	text-shadow:none!important;
+}
+.button.btn-default {
+    color:#FFFFFF!important;
+    background-color:#85C555!important;
+}
+.button.btn-gray {
+    color:#333;
+    background-color:#f6f6f6;
+    border:1px solid #ddd!important;
+}
+.button.btn-large {
+	width:100%;
+    display:block;
+}
+
+.header-panel {
+    padding-top: 10px;
+	margin-bottom:20px;
+}
+
+.vertical-margin {
+    margin-bottom:15px;
+}
+
+.app-page.dashboard {
+    padding-bottom:0!important;
+}
+/* ---- Dashboard Page ---- */
+.app-page#PageDashboard {
+	overflow:hidden!important;
+    margin:0;
+    padding:0;
+}
+.dashboard-top {
+	min-height: 35% !important;
+	height:35%;
+	padding:0;
+	margin:0;
+	background:#f9f9f9!important;
+}
+.dashboard-head {
+	padding:5% 8% 5%;
+}
+.dashboard-head > h1 {
+	color:#00B3DA;
+}
+.dashboard-head > div {
+	font-size:1.1em;
+}
+.dashboard-head > div.account-balance {
+	font-size:2.0em;
+	line-height:2.25em;
+}
+.dashboard-menu-container {
+	margin-top:-5px;
+	border-top:5px solid #85C555;
+	min-height:65% !important;
+	height:65%;
+	background-color:#00B3D9;
+	color:#FFFFFF;
+	position:relative;
+}
+.button-dashboard {
+	width:50%;
+	float:left;
+	border-bottom:1px solid #4dcae5;
+	height:33%;
+	min-height:33%;
+	display:block;
+}
+.button-dashboard:nth-child(odd) {
+	border-right:1px solid #4dcae5;
+	margin-left:-1px;
+}
+.button-dashboard:nth-child(5), .button-dashboard:nth-child(6) {
+	border-bottom:0;
+}
+.dashboard-triangle-crest {
+	width:30px;
+	height:15px;
+	display:block;
+	position:absolute;
+	top:-2px;
+	left:50%;
+	margin-left:-15px;
+
+}
+.button-dashboard a {
+	display:block;
+	margin:10% auto;
+	text-align:center;
+	text-decoration:none;
+	color:#FFFFFF;
+	font-weight:normal;
+	text-shadow:none;
+}
+.button-dashboard a:link, .button-dashboard a:link, .button-dashboard a:hover {
+	color:#FFFFFF;
+}
+.button-dashboard a img {
+	width:34%;
+	display:block;
+	margin:0 auto;
+}
+/* ---- List Pages ---- */
+.item-list .item {
+	padding: 20px;
+	border-bottom: 2px solid #e3e4e6;
+	background-color: white;
+	min-height: 50px;
+	overflow: hidden;
+	margin: none;
+	position:relative;
+}
+.item-list .item:last-child {
+    border-bottom:0;
+}
+
+.item-list > .item > span {
+	color: #72716e;
+    line-height: 25px;
+	display:block;
+	font-size:1.1em;
+}
+.item-list .item .toggle-icon {
+	width:40px;
+	height:40px;
+	display:block;
+	position:absolute;
+	top:25px;
+	right:25px;
+	background-image:url("../images/dropdown-circle.png");
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+.item-list > .item > .toggle-icon.close-icon {
+	background-image:url("../images/dropdown-close.png");
+}
+.item-list .item .account-name {
+	font-size:1.1em;
+	font-weight:bold;
+}
+.item-list .item .account-number {
+	font-size: 0.98em;
+	float: left;
+	font-weight:normal;
+}
+.item-list .item .account-balance {
+	font-size:1.1em;
+	color: #00B3D9;
+	float:right;
+	margin-right:78px;
+}
+.item-list > .item > .transaction-amount {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	text-align:right;
+	font-size:1.2em;
+}
+.item-list .item .transaction-icon {
+	width:16%;
+	float:left;
+	margin-right:15px;
+}
+.item-list > .item > .transaction-account {
+	color:#808080;
+}
+.item-list > .item > .transaction-date {
+	color:#666666;
+	font-weight:bold;
+}
+.item-list > .context-menu {
+	border:0;
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	width:100%;
+	height:100%;
+	padding:0;
+	background:#8dc044;
+	border-radius:0;
+	overflow:hidden;
+}
+.item-list > .context-menu > a {
+	display:block;
+	line-height:40px;
+	padding: 0 15px;
+	border-bottom:1px solid #9ed177;
+	color:#FFFFFF;
+	text-shadow:none;
+	text-decoration:none;
+}
+.item-list > .context-menu > a:last-child {
+	border-bottom:0;
+}
+.item-list > .item > .transaction-details  {
+	color:#FFFFFF;
+	font-weight:bold;
+	width:100%;
+	height:100%!important;
+	padding:5%;
+	display:block;
+	background:#8dc044;
+	text-shadow:none;
+	position:absolute;
+	top:0px;
+	left:0;
+	display:none;
+	z-index:100000000;
+}
+.item-list > .item > .transaction-details > span  {
+	width:1000px;
+	display:block;
+	font-size:1.1em;
+	line-height:150%;
+	white-space:pre;
+}
+
+
+
+/* ---- Form Pages ---- */
+.form-panel {
+    padding-top:10px;
+}
+.form-panel > .field-wrapper {
+	border:2px solid #d6ebf4;
+	border-radius:8px;
+	margin-bottom:20px;
+	min-width:100%;
+	width:100%;
+	margin-left:-2px;
+
+}
+.form-panel > .field-wrapper:nth-last-child {
+	margin-bottom:30px;
+}
+.form-panel > .field-wrapper > .field {
+	margin:5%;
+	min-width:90%;
+	width:90%;
+	position:relative;
+}
+.form-panel > .field-wrapper.full-field > .field > .input {
+	margin-left:0;
+	width:100;
+	height:100%;
+	min-width:100%;
+}
+.form-panel > .field-wrapper.full-fi    eld.no-dropdown > .field > .input > * {
+	background-image:none;
+}
+.form-panel > .field-wrapper.full-field > .field > .input > * {
+	background-size:15%;
+}
+.form-panel > .field-wrapper > .field > .label {
+	width:40%;
+	font-weight:bold;
+	color:#818085;
+	float:left;
+}
+.form-panel > .field-wrapper > .field > .input {
+	margin-left:40%;
+	width:60%;
+	height:100%;
+}
+.form-panel > .field-wrapper > .field > .input input, .form-panel > .field-wrapper > .field > .input select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline:none;
+	background:none;
+	background-image:url("../images/dropdown-arrow.png");
+	background-repeat:no-repeat;
+	background-position:right center;
+	background-size:28%;
+	border:0;
+	padding:0;
+	margin:0;
+	width:100%;
+}
+.form-panel > .field-wrapper > .field > .input input.number-input {
+    background-image:none!important;
+}
+/* ---- Appointment Details Page ---- */
+.appointment-details-body-panel {
+	font-size:1.2em;
+	color:#ACACAC;
+	margin-bottom:50px;
+}
+/* ---- Check Deposit Page ---- */
+.app-page.page-secondary#PageCheckDeposit, .app-page.page-secondary#PageAppointment {
+    overflow-y: hidden;
+}
+.deposit-step#deposit-confirm {
+    height: 100%;
+}
+.deposit-step {
+    background-color:#FFF;
+    height:100%;
+}
+.deposit-step p  {
+	padding:15px 10px 15px;
+}
+.deposit-step .heading {
+    color: #72716e;
+	font-size:1.25em;
+	margin: none;
+	line-height:1.5em;
+    padding-bottom:0;
+}
+.deposit-step .image-container {
+    width:100%;
+	height:100%;
+	margin-top:10px;
+	background-color:black;
+	position:relative;
+}
+
+.deposit-step .image-container .check-photo {
+	width:200px;
+	height:200px;
+	position:absolute;
+	overflow:auto;
+	margin:20% auto;
+    left:0;
+	right:0;
+}
+.deposit-step .check-preview-wrapper {
+	width:90%;
+	padding:2% 5%;
+}
+.deposit-step .check-preview-wrapper > .check-image-wrapper {
+	width:40%;
+	margin:0 5%;
+	display:block;
+	float:left;
+}
+.deposit-step .check-preview-wrapper > .check-image-wrapper > h4 {
+	text-align:center;
+}
+.deposit-step .check-preview-wrapper > .check-image-wrapper > img {
+	width:100%;
+}

@@ -1,0 +1,66 @@
+<!--
+    © Copyright 2015 IBM Corp.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+  <string name="app_name">MobileFirstBanking</string>  
+  <string name="push_notification_title">MobileFirstBanking</string>
+  
+  <!-- General purpose strings -->
+  <string name="error">Error</string>
+  <string name="close">Close</string>
+  <string name="cancel">Cancel</string>
+  
+  <!--  Settings Screen strings -->
+  <string name="worklightSettingsTitle">Screen Settings</string>
+  <string name="summaryWLServerUrl">Change the server URL: http[s]://domain or IP address[:port][/context root]</string>
+  <string name="titleWLServerUrl">Server URL</string>
+  <string name="networkSettingsTitleWLServerUrl">Network Settings</string>
+  <string name="OKTitleWLServerUrl">OK</string>
+  <string name="titleInvalidWLServerUrl">Invalid URL</string>
+  <string name="errorInvalidWLServerUrl">%1$s is not a valid URL. Valid format is http[s]://domain or IP address[:port][/context root]</string>
+  <string name="serverAddress">Server Address</string>
+  <string name="changeServerAddress">Change server URL</string>
+  
+  <!--  Settings Screen: Web Resources category -->
+  <string name="wlWebResourcesCategory">Web Resources</string>
+  <string name="wlAppIdTitle">App ID</string>
+  <string name="wlAppVersionTitle">App Version</string>
+  <string name="downloadingWebResourcesMessage">Downloading application resources (progress in kilobytes)</string>
+  
+  <!-- Direct Update -->
+  <string name="directUpdateDownloadingMessage">Downloading application update (progress in kilobytes)</string>
+  <string name="kb">%1$d/%2$d kb</string> 
+  
+  <!-- IBM MobileFirst Platform initialization errors -->
+  <string name="worklightInitInternalError">The application has encountered an internal error. Reinstall the application and try again.</string>
+  <string name="worklightInitNotEnoughSpace">Application installation has failed because there is no sufficient storage space available. Free %1$s MB and relaunch the application</string>
+  
+  
+  <string name="goBack">Go Back</string>
+  <string name="logout">Logout</string>
+  
+  <string name="accounts">Accounts</string>
+  <string name="transactions">Transactions</string>
+  <string name="loans">Loans</string>
+  <string name="check_deposit">Check Deposit</string>
+  <string name="appointments">Appointments</string>
+  <string name="find_atm">Find ATM</string>
+  
+  <string name="loading">Loading</string>
+  
+  <string name="uploading_checks">Uploading check photos</string>
+  <string name="appointment_title">MobileFirst Bank Appointment</string>
+  <string name="appointment_description">We have an appointment to discuss loan information</string>
+</resources>

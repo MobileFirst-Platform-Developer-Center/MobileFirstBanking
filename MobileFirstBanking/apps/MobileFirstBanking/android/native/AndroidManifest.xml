@@ -1,56 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.MobileFirstBanking" android:versionCode="1" android:versionName="1.0">  
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22"/>  
-    <supports-screens android:smallScreens="false" android:normalScreens="true" android:largeScreens="false"/>  
-    <uses-permission android:name="android.permission.INTERNET"/>  
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
+<!--
+    © Copyright 2015 IBM Corp.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.MobileFirstBanking" android:versionCode="1" android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22"/>
+    <supports-screens android:smallScreens="false" android:normalScreens="true" android:largeScreens="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!-- Push permissions -->
-    <permission android:name="com.MobileFirstBanking.permission.C2D_MESSAGE" android:protectionLevel="signature"/>  
-    <uses-permission android:name="com.MobileFirstBanking.permission.C2D_MESSAGE"/>  
+    <permission android:name="com.MobileFirstBanking.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.MobileFirstBanking.permission.C2D_MESSAGE"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
 
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>  
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>  
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA"/>
-    
+
     <application android:label="@string/app_name" android:icon="@drawable/app_icon" android:allowBackup="false">
-        <activity android:name="com.MobileFirstBanking.LaunchActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name"  android:screenOrientation="portrait" android:theme="@style/MobileFirstBankingThemeAuth"> 
-            <intent-filter> 
-                <action android:name="android.intent.action.MAIN"/>  
-                <category android:name="android.intent.category.LAUNCHER"/> 
-            </intent-filter> 
-            <intent-filter> 
-                <action android:name="com.MobileFirstBanking.LaunchActivity.NOTIFICATION"/>  
-                <category android:name="android.intent.category.DEFAULT"/> 
+        <activity android:name="com.MobileFirstBanking.LaunchActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name"  android:screenOrientation="portrait" android:theme="@style/MobileFirstBankingThemeAuth">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.MobileFirstBanking.LaunchActivity.NOTIFICATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <!-- Preference Activity  -->  
+        <!-- Preference Activity  -->
         <activity android:name="com.MobileFirstBanking.MobileFirstBanking" android:configChanges="orientation|screenSize|keyboard|keyboardHidden" android:screenOrientation="portrait" android:theme="@style/MobileFirstBankingTheme"/>
         <activity android:name="com.worklight.common.WLSettingActivity" android:label="Worklight Settings"></activity>
         <activity android:name="com.haibison.android.lockpattern.LockPatternActivity" android:configChanges="orientation|screenSize|keyboard|keyboardHidden" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <!-- UI Activity for displaying native dialogs  -->  
-        <activity android:name="com.worklight.wlclient.ui.UIActivity"/>  
-        <!-- Push service  -->  
-        <!-- In order to use the c2dm library, an application must declare a class with the name C2DMReceiver, in its own package, extending com.google.android.c2dm.C2DMBaseReceiver 
-			It must also include this section in the manifest, replacing "com.google.android.apps.chrometophone" with its package name. -->  
-        <service android:name=".GCMIntentService"/>  
-        <service android:name=".ForegroundService"/>  
-        <!-- Only google service can send data messages for the app. If permission is not set - any other app can generate it -->  
-        <receiver android:name="com.worklight.androidgap.push.WLBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND"> 
-            <!-- Receive the actual message -->  
-            <intent-filter> 
-                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>  
-                <category android:name="com.MobileFirstBanking"/> 
-            </intent-filter>  
-            <!-- Receive the registration id -->  
-            <intent-filter> 
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>  
-                <category android:name="com.MobileFirstBanking"/> 
-            </intent-filter> 
-        </receiver> 
-    </application> 
+        <!-- UI Activity for displaying native dialogs  -->
+        <activity android:name="com.worklight.wlclient.ui.UIActivity"/>
+        <!-- Push service  -->
+        <!-- In order to use the c2dm library, an application must declare a class with the name C2DMReceiver, in its own package, extending com.google.android.c2dm.C2DMBaseReceiver
+			It must also include this section in the manifest, replacing "com.google.android.apps.chrometophone" with its package name. -->
+        <service android:name=".GCMIntentService"/>
+        <service android:name=".ForegroundService"/>
+        <!-- Only google service can send data messages for the app. If permission is not set - any other app can generate it -->
+        <receiver android:name="com.worklight.androidgap.push.WLBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <!-- Receive the actual message -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.MobileFirstBanking"/>
+            </intent-filter>
+            <!-- Receive the registration id -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.MobileFirstBanking"/>
+            </intent-filter>
+        </receiver>
+    </application>
 </manifest>

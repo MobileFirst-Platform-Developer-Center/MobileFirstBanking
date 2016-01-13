@@ -1,8 +1,19 @@
 <!DOCTYPE HTML>
-		<!-- Licensed Materials - Property of IBM
-			 5725-I43 (C) Copyright IBM Corp. 2006, 2014. All Rights Reserved.
-			 US Government Users Restricted Rights - Use, duplication or
-             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. -->	
+<!--
+    © Copyright 2015 IBM Corp.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
 <html>
 	<head>
 		<meta charset="UTF-8" />
@@ -14,7 +25,7 @@
 				padding: 0;
 				text-align: center;
 			}
-			
+
 			#authenticatorLoginFormWrapper {
 				border: 2px solid #989898;
 				border-radius: 4px;
@@ -27,7 +38,7 @@
 				text-align: left;
 				width: 265px;
 			}
-			
+
 			#authenticatorLoginFormWrapper h1 {
 				background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAeCAMAAABqtKLHAAAAAXNSR0IArs4c6QAAAKhQTFRF////mJiY8PDw6OjoqKioyMjI4ODgAAAAwMDAuLi4YGBgMDAwcHBwoKCgaGhoAFiIAHioCEhwAGiYAGCQAHCgAGCYAICwAIC4AIi4QEBA2NjYAFiAAHiwAGCI0NDQgICAWFhYSEhIkJCQADBIeHh4ADhQADBAODg4EFBwAGiQCFB4GFh4cJCosLCwCFBwEFB4ICAgIFiAOGB4QGB4WICQYICYeJiweKCwSqN4OwAAANVJREFUSMfdlk0OhCAMhd+CBDhCN7Nqwsr7X2+UP6FgxiFs4BkTbOUZP4sUuhYgAkSs4FUGkUTV3Kxfrt5EyTvjg6B033UlvSFwikUiIDi0Hud6yokE+8msN+BaUJABlG8peXENYJKrq5cA1tYDgaaQUoICAsrjf7i2pjERUB/FeHuugkBRqIxxruJr3ZXqgJ25Pq7YvFgJwLT/QI4yluZqrX2/w1CZSGC4rkJvGs6R3TB1AqpxtTAf662nvj8uAGa+qz9GOqLYDCkMc+11b/G6GzYXgi/6uhyAhaXJ7gAAAABJRU5ErkJggg%3D%3D');
 				height:30px;
@@ -38,7 +49,7 @@
 				white-space: nowrap;
 				width: 85px;
 			}
-			
+
 			#authenticatorLoginFormWrapper h2 {
 				color: #303030;
 				font-family: arial,helvetica,sans-serif;
@@ -47,15 +58,15 @@
 				margin: 0;
 				padding: 60px 0 0;
 			}
-			
+
 			#authenticatorLoginFormWrapper form {
-			
+
 			}
-			
+
 			#authenticatorLoginFormWrapper form label {
 				display: none;
 			}
-			
+
 			#authenticatorLoginFormWrapper form input {
 				border: 1px solid #ccc;
 				color: #707070;
@@ -66,7 +77,7 @@
 				padding: 5px;
 				width: 190px;
 			}
-			
+
 			#authenticatorLoginFormWrapper form input#login {
 				background: -moz-linear-gradient(center top, #0088b8 5%, #005880 100%);
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0088b8), color-stop(1, #005880));
@@ -86,19 +97,19 @@
 				text-shadow: 1px 1px 0px #528ecc;
 				width: auto;
 			}
-			
+
 			#authenticatorLoginFormWrapper form input#login:hover {
 				background: -moz-linear-gradient(center top, #005880 5%, #0088b8 100%);
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #005880), color-stop(1, #0088b8));
 				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#005880', endColorstr='#0088b8');
 				background-color: #005880;
 			}
-			
+
 			#authenticatorLoginFormWrapper form input#login:active {
 				position: relative;
 				top: 1px;
 			}
-			
+
 			#authenticatorLoginFormWrapper #copyright {
 				border-top: 1px solid #c8c8c8;
 				color: #606060;
@@ -107,7 +118,7 @@
 				margin: 30px 0;
 				padding: 18px 0 0;
 			}
-			
+
 			#authenticatorLoginFormWrapper #copyright a {
 				color: #006098;
 				text-decoration: none;
@@ -141,7 +152,7 @@
 				}
 				document.cookie = name + '=' + value + expires + '; path=/';
 			}
-			
+
 			function readCookie(name) {
 				var nameEQ = name + '=',
 					i,
@@ -158,11 +169,11 @@
 				}
 				return null;
 			}
-			
+
 			function eraseCookie(name) {
 				createCookie(name, '', -1);
 			}
-			
+
 			function areCookiesEnabled() {
 				var r = false;
 				createCookie('testing', 'Hello', 1);
@@ -172,18 +183,18 @@
 				}
 				return r;
 			}
-			
+
 			function isPopup() {
 				var POPUP_INDICATOR = 'action=popup';
 				if (window.location.search.indexOf(POPUP_INDICATOR) > 0) {
 					document.getElementById('authenticatorLoginFormWrapper').className = 'isPopup';
 				}
 			}
-			
+
 			function setFocus() {
 				document.getElementById('j_username').focus();
 			}
-			
+
 			if (!areCookiesEnabled()) {
 				alert('Cookies are currently disabled in your browser settings. Please enable them and reload the page.');
 			}
